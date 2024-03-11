@@ -4,26 +4,41 @@ from datasets import load_dataset
 import json
 import folder_path as path
 import time
+import os
+from enum import Enum
 
-class data_processor: # haven't refactored
+class data_tyle(Enum):
+    intents = 'intents.json'
+class data_processor:
     def __init__(self) -> None:
         pass
-    def preprocess(input_path = 'intents.json'):
-        with open(input_path,'r') as file:
-            data = json.load(file)
-        preprocess_data = []
-        for intent in data['intents']:
+    def process(self,input_path) -> list:
+        file_name = os.path.basename(input_path)
+        if (file_name == 'intents.json'):
+            return self._data_intents()
+    def _data_intents(self) -> list:
+        with open(path.raw_data.intents,'r') as file:
+            raw_data = json.load(file)
+        data = []
+        for intent in raw_data['intents']:
             for patternn in intent['patterns']:
-                preprocess_data.append(f'User: {patternn}\n')
+                data.append(f'User: {patternn}\n')
                 for response in intent['responses']:
-                    preprocess_data.append(f'Assistant: {response}\n')
-        return ''.join(preprocess_data)
-    def save_preprocess(data,output_path = 'data/data.txt'):
+                    data.append(f'Assistant: {response}\n')
+        return data
+class gpt2_data:
+    def __init__(self) -> None:
+        self.processor = data_processor()
+    def _preprocess(self,input_path) -> list:
+        return self.processor.process(input_path)
+    def _save(self,data,output_path):
         with open(output_path,'w') as file:
-            file.write(data)
-    def aaa(self):
-        data = self.preprocess()
-        self.save_preprocess(data)
+            file.write(','.join(data))
+    def process(self,type : data_tyle):
+        if (type == data_tyle.intents):
+            data = self._preprocess(path.raw_data.intents)
+            self._save(data,path.data.intents)
+            return path.data.intents
 class handler:
     def __init__(self) -> None:
         pass
@@ -81,11 +96,15 @@ class handler:
         tokenizer = AutoTokenizer.from_pretrained(path.model.gpt2)
         collator = DataCollatorForLanguageModeling(tokenizer=tokenizer,mlm=False)
         train_args = self.get_training_args()
+        if (not os.path.exists(path.data.intents)):
+            processor = gpt2_data()
+            processor.process(type=data_tyle.intents)
         train_ds = self.get_text_data_set(tokenizer,path.data.intents,64)
         trainer = self.get_trainer(model,train_args,train_ds,tokenizer,collator)
         trainer.train()
         model.save_pretrained(path.output.model)
         end_time = time.time()
         print(f'Elapsed time : {end_time-start_time}s')
+        print(f'Saved at {path.output.model}')
 
 

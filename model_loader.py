@@ -20,7 +20,7 @@ class gpt2:
         self.model = PeftModel(model=self.model,peft_config=self.peft_config)
         self.model.unload()
         self.use_lora = False
-    def inference(self,input,max_token : int = 32):
+    def inference(self,input,max_token : int = None):
         inputs = self.tokenizer(input,return_tensors="pt")
         if (self.use_lora == False):
             start_time = time.time()
