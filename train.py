@@ -1,5 +1,8 @@
 from transformers import AutoModelForCausalLM, OPTForCausalLM, AutoTokenizer,AutoModelForSeq2SeqLM,TrainingArguments,Trainer,DataCollatorForLanguageModeling,TextDataset
+from transformers import BitsAndBytesConfig
 from peft import LoraConfig,TaskType,get_peft_model
+from peft import prepare_model_for_kbit_training
+import torch as torch
 from datasets import load_dataset
 import json
 import folder_path as path
@@ -44,14 +47,16 @@ class handler:
         pass
     def get_lora_config(self,
                         task_type : TaskType = TaskType.CAUSAL_LM, inference_mode : bool = False,
-                        r : int = 4, lora_alpha : int = 32, lora_dropout : float = 0.1
+                        r : int = 4, lora_alpha : int = 32, lora_dropout : float = 0.1,
+                        target_modules : list[str]|str = None
                         ) -> LoraConfig:
         return LoraConfig(
             task_type=task_type,
             inference_mode=inference_mode,
             r=r,
             lora_alpha=lora_alpha,
-            lora_dropout=lora_dropout
+            lora_dropout=lora_dropout,
+            target_modules = target_modules
         )
     def get_training_args(self,
                           output_dir : int = path.output.model,learning_rate : float = 1e-3,
@@ -87,10 +92,38 @@ class handler:
             tokenizer=tokenizer,
             data_collator = collator
         )
+    def q_train_test(self):
+        print(f'Start training')
+        peft_config = self.get_lora_config(target_modules='all-linear')
+        q_config = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_quant_type='nf4',
+            bnb_4bit_use_double_quant=True,
+            #bnb_4bit_compute_dtype=torch.bfloat16
+        )
+        model = AutoModelForCausalLM.from_pretrained(path.model.gpt2,quantization_config = q_config)
+        q_model = prepare_model_for_kbit_training(model)
+        q_model = get_peft_model(q_model,peft_config)
+        tokenizer = AutoTokenizer.from_pretrained(path.model.gpt2)
+        collator = DataCollatorForLanguageModeling(tokenizer=tokenizer,mlm=False)
+        train_args = self.get_training_args()
+        if (not os.path.exists(path.data.intents)):
+            processor = gpt2_data()
+            processor.process(type=data_tyle.intents)
+        train_ds = self.get_text_data_set(tokenizer,path.data.intents,64)
+        trainer = self.get_trainer(q_model,train_args,train_ds,tokenizer,collator)
+
+        start_time = time.time()
+        trainer.train()
+        end_time = time.time()
+        q_model.save_pretrained(path.output.q_model)
+        
+        print(f'Elapsed time : {end_time-start_time}s')
+        print(f'Saved at {path.output.q_model}')
     def train_test(self):
         print(f'Start training')
-        start_time = time.time()
-        peft_config = self.get_lora_config()
+        
+        peft_config = self.get_lora_config(target_modules='all-linear')
         model = AutoModelForCausalLM.from_pretrained(path.model.gpt2)
         model = get_peft_model(model,peft_config)
         tokenizer = AutoTokenizer.from_pretrained(path.model.gpt2)
@@ -101,9 +134,11 @@ class handler:
             processor.process(type=data_tyle.intents)
         train_ds = self.get_text_data_set(tokenizer,path.data.intents,64)
         trainer = self.get_trainer(model,train_args,train_ds,tokenizer,collator)
+        start_time = time.time()
         trainer.train()
-        model.save_pretrained(path.output.model)
         end_time = time.time()
+        model.save_pretrained(path.output.model)
+        
         print(f'Elapsed time : {end_time-start_time}s')
         print(f'Saved at {path.output.model}')
 
