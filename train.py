@@ -2,8 +2,6 @@ from transformers import AutoModelForCausalLM, OPTForCausalLM, AutoTokenizer,Aut
 from transformers import BitsAndBytesConfig
 from peft import LoraConfig,TaskType,get_peft_model
 from peft import prepare_model_for_kbit_training
-import torch as torch
-from datasets import load_dataset
 import json
 import folder_path as path
 import time
@@ -36,7 +34,8 @@ class gpt2_data:
         return self.processor.process(input_path)
     def _save(self,data,output_path):
         with open(output_path,'w') as file:
-            file.write(','.join(data))
+            data = ''.join(data)
+            file.write(data)
     def process(self,type : data_tyle):
         if (type == data_tyle.intents):
             data = self._preprocess(path.raw_data.intents)
@@ -92,9 +91,36 @@ class handler:
             tokenizer=tokenizer,
             data_collator = collator
         )
+    def get_trainer_for_gpt2(self,model):
+        tokenizer = AutoTokenizer.from_pretrained(path.model.gpt2)
+        collator = DataCollatorForLanguageModeling(tokenizer=tokenizer,mlm=False)
+        train_args = self.get_training_args()
+        trainer = Trainer(
+            model = model,
+            tokenizer = tokenizer,
+            args=train_args,
+            train_dataset=None,
+            data_collator=collator
+        )
+        return trainer
+    def get_lora_config_continous(self,r):
+        return self.get_lora_config(r=r)
+    def train_model(self,trainer : Trainer,raw_data,epoch,lr): # todo : train only adapter, not base model
+        with open(path.continous.data,'w') as file:
+            file.write(raw_data)
+        trainer.train_dataset = self.get_text_data_set(trainer.tokenizer,path.continous.data,64)
+        trainer.args.num_train_epochs = epoch
+        trainer.args.learning_rate = lr
+        start_time = time.time()
+        print(trainer.train_dataset.examples)
+        trainer.train()
+        end_time = time.time()
+        print(f'Elapsed time : {end_time-start_time}s')
+    def wrap(self,model,config):
+        return get_peft_model(model,config)
     def q_train_test(self):
         print(f'Start training')
-        peft_config = self.get_lora_config(target_modules='all-linear')
+        peft_config = self.get_lora_config(target_modules=["c_proj","c_attn","c_fc"])
         q_config = BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_quant_type='nf4',

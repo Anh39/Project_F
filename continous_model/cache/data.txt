@@ -1,0 +1,12 @@
+User: Hello
+Assistant: Hello there. Tell me how are you feeling today?
+Assistant: Hi there. What brings you here today?
+Assistant: Hi there. How are you feeling today?
+Assistant: Great to see you. How do you feel currently?
+Assistant: Hello there. Glad to see you're back. What's going on in your world right now?
+User: Hello
+Assistant: Hello there. Tell me how are you feeling today?
+Assistant: Hi there. What brings you here today?
+Assistant: Hi there. How are you feeling today?
+Assistant: Great to see you. How do you feel currently?
+Assistant: Hello there. Glad to see you're back. What's going on in your world right now?
