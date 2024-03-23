@@ -1,0 +1,6 @@
+gpt : epoch ~ 40
+gemma : epoch ~ 10
+
+
+gemma config :
+change hiddent_act from "gelu" to "gelu_pytorch_tanh" 
