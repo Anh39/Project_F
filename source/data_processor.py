@@ -2,6 +2,8 @@ from enum import Enum
 import os,json
 from source import folder_path
 from transformers import AutoTokenizer,PreTrainedTokenizerBase
+import pandas as pd
+import random
 
 class data_tyle(Enum):
     intents = 'intents.json'
@@ -70,3 +72,131 @@ class causal_data:
         if (empty):
             self.empy()
         return result
+    
+
+class causal_mmlu:
+    mapping = {
+        0 : 'A',
+        1 : 'B',
+        2 : 'C',
+        3 : 'D'
+        }
+    reversed_mapping = {
+        'A' : 0,
+        'B' : 1,
+        'C' : 2,
+        'D' : 3
+    }
+    raw_data_frame = pd.read_parquet(folder_path.data.mmlu_test)
+    data_frame : pd.DataFrame = pd.DataFrame(columns=['Content','Context'])
+    @classmethod
+    def _process_row(self,data_row : pd.Series):
+        context = data_row['subject']
+        question = data_row['question']
+        choices = data_row['choices']
+        options = f'{self.mapping[0]}: {choices[0]} {self.mapping[1]}: {choices[1]} {self.mapping[2]}: {choices[2]} {self.mapping[3]}: {choices[3]}'
+        answer = f'{self.mapping[data_row['answer']]}: {choices[data_row['answer']]}'
+        result = f'Context: {context}\nQuestion: {question}\nOptions: {options}\nAnswer: {answer}'
+        return [result,context]
+    @classmethod
+    def custom_init(self):
+        for index,row in self.raw_data_frame.iterrows():
+            self.data_frame.loc[index] = self._process_row(row)
+    @classmethod
+    def _get_single_data(self,dataframe : pd.DataFrame,k : int = 5, seed : int = 39):
+        result = []
+        sampled_data = dataframe.sample(n=k,random_state=seed)
+        for index,row in sampled_data.iterrows():
+            result.append(row['Content'])
+        last_ele = result[len(result)-1]
+        last_ele = last_ele.split('\nAnswer:')
+        answer = last_ele[1][1:]
+        last_ele = last_ele[0]
+        result[len(result)-1] = last_ele
+        return {
+            'Question' : result,
+            'Answer' : answer
+        }
+    @classmethod
+    def get_data(self,context : str,k : int = 5,num : int = 1,seed : int = 39):
+        filtered_data = self.data_frame[self.data_frame['Context'] == context]
+        result = []
+        while(len(result) < num):
+            result.append(self._get_single_data(filtered_data,k=k,seed=seed))
+        return result
+    
+    
+class mmlu_category:
+    abstract_algebra = "abstract_algebra"
+    anatomy = "anatomy"
+    astronomy = "astronomy"
+    business_ethics = "business_ethics"
+    clinical_knowledge = "clinical_knowledge"
+    college_biology = "college_biology"
+    college_chemistry = "college_chemistry"
+    college_computer_science = "college_computer_science"
+    college_mathematics = "college_mathematics"
+    college_medicine = "college_medicine"
+    college_physics = "college_physics"
+    computer_security = "computer_security"
+    conceptual_physics = "conceptual_physics"
+    econometrics = "econometrics"
+    electrical_engineering = "electrical_engineering"
+    elementary_mathematics = "elementary_mathematics"
+    formal_logic = "formal_logic"
+    global_facts = "global_facts"
+    high_school_biology = "high_school_biology"
+    high_school_chemistry = "high_school_chemistry"
+    high_school_computer_science = "high_school_computer_science"
+    high_school_european_history = "high_school_european_history"
+    high_school_geography = "high_school_geography"
+    high_school_government_and_politics = "high_school_government_and_politics"
+    high_school_macroeconomics = "high_school_macroeconomics"
+    high_school_mathematics = "high_school_mathematics"
+    high_school_microeconomics = "high_school_microeconomics"
+    high_school_physics = "high_school_physics"
+    high_school_psychology = "high_school_psychology"
+    high_school_statistics = "high_school_statistics"
+    high_school_us_history = "high_school_us_history"
+    high_school_world_history = "high_school_world_history"
+    human_aging = "human_aging"
+    human_sexuality = "human_sexuality"
+    international_law = "international_law"
+    jurisprudence = "jurisprudence"
+    logical_fallacies = "logical_fallacies"
+    machine_learning = "machine_learning"
+    management = "management"
+    marketing = "marketing"
+    medical_genetics = "medical_genetics"
+    miscellaneous = "miscellaneous"
+    moral_disputes = "moral_disputes"
+    moral_scenarios = "moral_scenarios"
+    nutrition = "nutrition"
+    philosophy = "philosophy"
+    prehistory = "prehistory"
+    professional_accounting = "professional_accounting"
+    professional_law = "professional_law"
+    professional_medicine = "professional_medicine"
+    professional_psychology = "professional_psychology",
+    public_relations = "public_relations"
+    security_studies = "security_studies"
+    sociology = "sociology"
+    us_foreign_policy = "us_foreign_policy"
+    virology = "virology"
+    world_religions = "world_religions"
+    total = [abstract_algebra,anatomy,astronomy,business_ethics,clinical_knowledge,
+             college_biology,college_chemistry,college_computer_science,college_mathematics,college_medicine,college_physics,
+             computer_security,conceptual_physics,econometrics,electrical_engineering,elementary_mathematics,
+             formal_logic,global_facts,
+             high_school_biology,high_school_chemistry,high_school_computer_science,high_school_european_history,
+             high_school_geography,high_school_government_and_politics,high_school_macroeconomics,high_school_mathematics,
+             high_school_microeconomics,high_school_physics,high_school_statistics,high_school_us_history,high_school_world_history,
+             human_aging,human_sexuality,jurisprudence,logical_fallacies,
+             machine_learning,management,marketing,medical_genetics,moral_disputes,moral_scenarios,
+             nutrition,philosophy,prehistory,professional_accounting,professional_law,professional_medicine,professional_psychology,
+             public_relations,security_studies,sociology,us_foreign_policy,world_religions]
+    @classmethod
+    def get_random(self,seed):
+        random.seed(seed)
+        return random.choice(self.total)
+        

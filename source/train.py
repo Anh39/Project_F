@@ -3,7 +3,7 @@ from transformers import BitsAndBytesConfig
 from peft import LoraConfig,TaskType,PeftModel,get_peft_model
 from peft import prepare_model_for_kbit_training
 import source.folder_path as path
-import time,os,json
+import time,os,json,shutil
 from source.model_loader import causal_model
 
 class handler:
@@ -76,6 +76,7 @@ class handler:
             train_dataset=train_dataset,
             eval_dataset=train_dataset,
             data_collator=collator
+            
         )
         peft_config = LoraConfig(
             task_type = TaskType.CAUSAL_LM,
@@ -96,4 +97,39 @@ class handler:
         causal_model.model.save_pretrained(path.output.gemma,selected_adapters=['Train'])
         print(f'Training time : {end_time-start_time}s')
         causal_model.model.unload()
+    def continue_train_gemma(self,causal_model : causal_model,train_dataset,adapter_name = 'Train',
+                            lr : float = 1e-3,epoch : int = 1,weight_decay : float = 0.01,
+                            r : int = 4):
+        
+        collator = DataCollatorForLanguageModeling(tokenizer=causal_model.tokenizer,mlm=False)
+        train_args = TrainingArguments(
+            output_dir=path.output.gemma,
+            learning_rate=lr,
+            num_train_epochs=epoch,
+            weight_decay=weight_decay,
+            evaluation_strategy="epoch",
+            save_strategy="no",
+            # resume_from_checkpoint=
+            # Load model instead, not resuming like this
+        )
+        
+        current_adapter = causal_model.prepare_for_continue_train()
+
+        causal_model.model.base_model = prepare_model_for_kbit_training(causal_model.model.base_model)
+        trainer = Trainer(
+            model = causal_model.model,
+            tokenizer = causal_model.tokenizer,
+            args=train_args,
+            train_dataset=train_dataset,
+            eval_dataset=train_dataset,
+            data_collator=collator
+            
+        )
+        start_time = time.time()
+        trainer.train()
+        end_time = time.time()
+        causal_model.model.save_pretrained(path.output.gemma,selected_adapters=[current_adapter])
+        shutil.rmtree(os.path.join(path.output.gemma,adapter_name))
+        os.rename(os.path.join(path.output.gemma,current_adapter),os.path.join(path.output.gemma,adapter_name))
+        print(f'Training time : {end_time-start_time}s')
 
