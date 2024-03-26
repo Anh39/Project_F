@@ -12,4 +12,4 @@ import utility
 gpt = model_loader.gemma2b(folder_path.output.gemma+'\\Train')
 evaltor = causal_mmlu_eval(gpt)
 # print(evaltor.dual_random_evaluate(save=True,num=10,sample_amount=2,ran_range=[1,1000000]))
-print(evaltor.dual_random_evaluate_single_category(category=mmlu_category.abstract_algebra,save=True,num=10,sample_amount=2,ran_range=[1,1000000]))
+print(evaltor.dual_random_evaluate_single_category(category=mmlu_category.abstract_algebra,save=True,num=50,sample_amount=2,ran_range=[1,1000000]))

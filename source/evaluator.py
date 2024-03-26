@@ -49,9 +49,9 @@ class causal_mmlu_eval:
                 self.dp.add_data(test_data[0]['Question'][j])
         train_data = self.dp.get_data()
         try:
-            self.trainer.continue_train_gemma(self.model,train_dataset=train_data,epoch=2,lr=1e-3)
+            self.trainer.continue_train_gemma(self.model,train_dataset=train_data,epoch=1,lr=1e-3)
         except:
-            self.trainer.train_gemma(self.model,train_dataset=train_data,epoch=2,lr=1e-3)
+            self.trainer.train_gemma(self.model,train_dataset=train_data,epoch=1,lr=1e-3)
         start_time = time.time()
         
         torch.cuda.reset_max_memory_allocated(device)
