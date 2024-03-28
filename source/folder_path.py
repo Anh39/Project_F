@@ -36,6 +36,7 @@ class output:
     gemma = os.path.join(_output_folder,'gemma')
     llama7b = os.path.join(_output_folder,'llama7b')
     eval_log = os.path.join(_project_path,'eval_log.json')
+    eval_log_sep = os.path.join(_project_path,'eval_log_separate.json')
     # q_model = os.path.join(_output_folder,'q_model')
     # model = os.path.join(_output_folder,'model')
     # test = os.path.join(_output_folder,'test')

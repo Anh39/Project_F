@@ -4,6 +4,7 @@ from source import folder_path
 from transformers import AutoTokenizer,PreTrainedTokenizerBase
 import pandas as pd
 import random
+from sklearn.model_selection import train_test_split
 
 class data_tyle(Enum):
     intents = 'intents.json'
@@ -118,13 +119,36 @@ class causal_mmlu:
             'Answer' : answer
         }
     @classmethod
-    def get_data(self,context : str,k : int = 5,num : int = 1,seed : int = 39):
+    def get_single_data(self,context : str,k : int = 5,seed : int = 39):
         filtered_data = self.data_frame[self.data_frame['Context'] == context]
-        result = []
-        while(len(result) < num):
-            result.append(self._get_single_data(filtered_data,k=k,seed=seed))
+        result = self._get_single_data(filtered_data,k=k,seed=seed)
         return result
-    
+    @classmethod
+    def get_data(self,context,amount : int = 10,k : int = 5,seed : int = 39):
+        filtered_data = self.data_frame[self.data_frame['Context'] == context]
+        dataframe = filtered_data
+        result = []
+        sampled_datas = dataframe.sample(n=amount*k,random_state=seed)
+        total_it = 0
+        while len(result)<amount:
+            it = 0
+            question = []
+            while (it<k):
+                total_it += 1
+                it+=1
+                question.append(sampled_datas.iloc[total_it-1]['Content'])
+            last_ele = question[len(question)-1]
+            last_ele = last_ele.split('\nAnswer:')
+            answer = last_ele[1][1:]
+            last_ele = last_ele[0]
+            question[len(question)-1] = last_ele
+            qa = {
+                'Question' : question,
+                'Answer' : answer,
+                'Context' : context
+            }
+            result.append(qa)
+        return result
     
 class mmlu_category:
     abstract_algebra = "abstract_algebra"
@@ -196,7 +220,10 @@ class mmlu_category:
              nutrition,philosophy,prehistory,professional_accounting,professional_law,professional_medicine,professional_psychology,
              public_relations,security_studies,sociology,us_foreign_policy,world_religions]
     @classmethod
-    def get_random(self,seed):
-        random.seed(seed)
+    def get_random(self,seed = None):
+        if (seed == None):
+            random.seed()
+        else:
+            random.seed(seed)
         return random.choice(self.total)
         
