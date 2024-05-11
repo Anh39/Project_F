@@ -1,0 +1,4052 @@
+[
+    {
+        "Train": {
+            "train_time": 438.0603058338165,
+            "train_mem_init": 1980.5478515625,
+            "train_mem_use": 5631.02880859375,
+            "train_mem_end": 7611.57666015625
+        },
+        "Evaluate": [
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.7801201343536377,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.23388671875,
+                "infer_mem_end": 3196.18505859375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.4433279037475586,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.25537109375,
+                "infer_mem_end": 3208.20654296875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.7384629249572754,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.7585456371307373,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.845703125,
+                "infer_mem_end": 3195.796875
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 1.126368522644043,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2578125,
+                "infer_mem_end": 3201.208984375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.9879233837127686,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.25341796875,
+                "infer_mem_end": 3201.20458984375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.257157564163208,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 322.40478515625,
+                "infer_mem_end": 3319.35595703125
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 0.5884947776794434,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.49267578125,
+                "infer_mem_end": 3197.44384765625
+            },
+            {
+                "predict": "B",
+                "reference": "C",
+                "infer_time": 2.381706953048706,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 357.3681640625,
+                "infer_mem_end": 3354.3193359375
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 1.2550280094146729,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.25341796875,
+                "infer_mem_end": 3201.20458984375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 1.0946924686431885,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 1.0677080154418945,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 205.841796875,
+                "infer_mem_end": 3202.79296875
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.3256969451904297,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.6591796875,
+                "infer_mem_end": 3197.6103515625
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 0.7388453483581543,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.8115234375,
+                "infer_mem_end": 3194.7626953125
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 1.3747754096984863,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 214.34423828125,
+                "infer_mem_end": 3211.29541015625
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 1.825209140777588,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 288.30322265625,
+                "infer_mem_end": 3285.25439453125
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 1.0206937789916992,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.544921875,
+                "infer_mem_end": 3201.49609375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.7249071598052979,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.8115234375,
+                "infer_mem_end": 3194.7626953125
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 1.0669050216674805,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.009765625,
+                "infer_mem_end": 3203.9609375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 2.310490846633911,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 336.11572265625,
+                "infer_mem_end": 3333.06689453125
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 1.0268568992614746,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.10107421875,
+                "infer_mem_end": 3203.05224609375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.6979973316192627,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.36328125,
+                "infer_mem_end": 3196.314453125
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 0.7211055755615234,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.32861328125,
+                "infer_mem_end": 3195.27978515625
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 1.4648451805114746,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 217.32421875,
+                "infer_mem_end": 3214.275390625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.705784797668457,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.716796875,
+                "infer_mem_end": 3195.66796875
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 0.7368366718292236,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.4345703125,
+                "infer_mem_end": 3197.3857421875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.7524888515472412,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.97509765625,
+                "infer_mem_end": 3195.92626953125
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 1.0787718296051025,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 1.1218183040618896,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.91845703125,
+                "infer_mem_end": 3204.86962890625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.253901481628418,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.91796875,
+                "infer_mem_end": 3197.869140625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.2584104537963867,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2626953125,
+                "infer_mem_end": 3201.2138671875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.701026439666748,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.845703125,
+                "infer_mem_end": 3195.796875
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 13.734944105148315,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 1091.25927734375,
+                "infer_mem_end": 4088.21044921875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.1999800205230713,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.0888628959655762,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.1044921875,
+                "infer_mem_end": 3196.0556640625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 2.2005515098571777,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.14111328125,
+                "infer_mem_end": 3208.09228515625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.0143086910247803,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.97509765625,
+                "infer_mem_end": 3195.92626953125
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 1.5289990901947021,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.75,
+                "infer_mem_end": 3203.701171875
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.0132036209106445,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.318359375,
+                "infer_mem_end": 3197.26953125
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 1.781304121017456,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.27197265625,
+                "infer_mem_end": 3201.22314453125
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 1.5169804096221924,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.490234375,
+                "infer_mem_end": 3203.44140625
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.8245737552642822,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.60107421875,
+                "infer_mem_end": 3199.55224609375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.7539842128753662,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.52978515625,
+                "infer_mem_end": 3197.48095703125
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 4.4782891273498535,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 426.43359375,
+                "infer_mem_end": 3423.384765625
+            },
+            {
+                "predict": "B",
+                "reference": "A",
+                "infer_time": 2.3360021114349365,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 249.31591796875,
+                "infer_mem_end": 3246.26708984375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 2.371392011642456,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 250.36279296875,
+                "infer_mem_end": 3247.31396484375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 3.4694936275482178,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 383.9306640625,
+                "infer_mem_end": 3380.8818359375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.7375202178955078,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.98974609375,
+                "infer_mem_end": 3199.94091796875
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 2.198817729949951,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.71240234375,
+                "infer_mem_end": 3208.66357421875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.4628288745880127,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.009765625,
+                "infer_mem_end": 3203.9609375
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 2.2878592014312744,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 223.14404296875,
+                "infer_mem_end": 3220.09521484375
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 1.7950241565704346,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.4150390625,
+                "infer_mem_end": 3201.3662109375
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 1.740847110748291,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.91796875,
+                "infer_mem_end": 3197.869140625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.761889934539795,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.6591796875,
+                "infer_mem_end": 3197.6103515625
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 1.4621703624725342,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.36083984375,
+                "infer_mem_end": 3203.31201171875
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 1.7684431076049805,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.60107421875,
+                "infer_mem_end": 3199.55224609375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.0157365798950195,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.716796875,
+                "infer_mem_end": 3195.66796875
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 1.024078130722046,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.23388671875,
+                "infer_mem_end": 3196.18505859375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 1.901261568069458,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 214.458984375,
+                "infer_mem_end": 3211.41015625
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 2.2830944061279297,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 218.0146484375,
+                "infer_mem_end": 3214.9658203125
+            },
+            {
+                "predict": "B",
+                "reference": "A",
+                "infer_time": 1.4493865966796875,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 205.7119140625,
+                "infer_mem_end": 3202.6630859375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.010298728942871,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.1044921875,
+                "infer_mem_end": 3196.0556640625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 1.764859914779663,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.341796875,
+                "infer_mem_end": 3199.29296875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.7205379009246826,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.91796875,
+                "infer_mem_end": 3197.869140625
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 1.1659832000732422,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.0277729034423828,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.6826171875,
+                "infer_mem_end": 3194.6337890625
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 1.485891580581665,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 208.5673828125,
+                "infer_mem_end": 3205.5185546875
+            },
+            {
+                "predict": "B",
+                "reference": "D",
+                "infer_time": 2.319098949432373,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 218.81787109375,
+                "infer_mem_end": 3215.76904296875
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 2.223407506942749,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.71240234375,
+                "infer_mem_end": 3208.66357421875
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 1.740950345993042,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.341796875,
+                "infer_mem_end": 3199.29296875
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 1.015942096710205,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.1044921875,
+                "infer_mem_end": 3196.0556640625
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 1.4755196571350098,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.91845703125,
+                "infer_mem_end": 3204.86962890625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.7612414360046387,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.28125,
+                "infer_mem_end": 3201.232421875
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 1.4524972438812256,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.4579448699951172,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 205.9716796875,
+                "infer_mem_end": 3202.9228515625
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 1.4865527153015137,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.0175209045410156,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.4345703125,
+                "infer_mem_end": 3197.3857421875
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 1.030970573425293,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.6826171875,
+                "infer_mem_end": 3194.6337890625
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 1.7667334079742432,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.0830078125,
+                "infer_mem_end": 3199.0341796875
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 1.7591543197631836,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.60107421875,
+                "infer_mem_end": 3199.55224609375
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 1.7205851078033447,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.400390625,
+                "infer_mem_end": 3197.3515625
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.7405712604522705,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.73046875,
+                "infer_mem_end": 3199.681640625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.0129890441894531,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.37646484375,
+                "infer_mem_end": 3197.32763671875
+            },
+            {
+                "predict": "B",
+                "reference": "C",
+                "infer_time": 2.936337471008301,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 336.11572265625,
+                "infer_mem_end": 3333.06689453125
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 2.173354387283325,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.48388671875,
+                "infer_mem_end": 3208.43505859375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.7075905799865723,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.400390625,
+                "infer_mem_end": 3197.3515625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 2.9600560665130615,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 325.49072265625,
+                "infer_mem_end": 3322.44189453125
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 2.326267719268799,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 245.12841796875,
+                "infer_mem_end": 3242.07958984375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 3.4024102687835693,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 386.0556640625,
+                "infer_mem_end": 3383.0068359375
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 2.4279613494873047,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 290.42822265625,
+                "infer_mem_end": 3287.37939453125
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 1.1737945079803467,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 1.1810827255249023,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 1.803086757659912,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2763671875,
+                "infer_mem_end": 3201.2275390625
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 1.194542407989502,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 3.477870225906372,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 382.8681640625,
+                "infer_mem_end": 3379.8193359375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 1.757606029510498,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.98974609375,
+                "infer_mem_end": 3199.94091796875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.7162256240844727,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 201.1767578125,
+                "infer_mem_end": 3198.1279296875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.7499792575836182,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2490234375,
+                "infer_mem_end": 3201.2001953125
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.0012831687927246,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.19921875,
+                "infer_mem_end": 3195.150390625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 1.7373652458190918,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 201.30615234375,
+                "infer_mem_end": 3198.25732421875
+            }
+        ]
+    },
+    {
+        "Train": {
+            "train_time": 480.5035750865936,
+            "train_mem_init": 2996.951171875,
+            "train_mem_use": 6189.6484375,
+            "train_mem_end": 9186.599609375
+        },
+        "Evaluate": [
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.9276416301727295,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.23388671875,
+                "infer_mem_end": 3196.18505859375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.9766407012939453,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.25537109375,
+                "infer_mem_end": 3208.20654296875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.0568749904632568,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.9375605583190918,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.845703125,
+                "infer_mem_end": 3195.796875
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 1.2878658771514893,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2578125,
+                "infer_mem_end": 3201.208984375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.048224925994873,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.25341796875,
+                "infer_mem_end": 3201.20458984375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.5092027187347412,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 322.40478515625,
+                "infer_mem_end": 3319.35595703125
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 0.6717619895935059,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.49267578125,
+                "infer_mem_end": 3197.44384765625
+            },
+            {
+                "predict": "B",
+                "reference": "C",
+                "infer_time": 2.335357666015625,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 357.3681640625,
+                "infer_mem_end": 3354.3193359375
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 0.9998197555541992,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.25341796875,
+                "infer_mem_end": 3201.20458984375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 0.9032676219940186,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 0.8633859157562256,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 205.841796875,
+                "infer_mem_end": 3202.79296875
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.9761857986450195,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.6591796875,
+                "infer_mem_end": 3197.6103515625
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 0.5929214954376221,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.8115234375,
+                "infer_mem_end": 3194.7626953125
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 1.1792621612548828,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 214.34423828125,
+                "infer_mem_end": 3211.29541015625
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 1.4261658191680908,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 288.30322265625,
+                "infer_mem_end": 3285.25439453125
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 0.8261125087738037,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.544921875,
+                "infer_mem_end": 3201.49609375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.577800989151001,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.8115234375,
+                "infer_mem_end": 3194.7626953125
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.8785736560821533,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.009765625,
+                "infer_mem_end": 3203.9609375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.8665308952331543,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 336.11572265625,
+                "infer_mem_end": 3333.06689453125
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 0.8233394622802734,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.10107421875,
+                "infer_mem_end": 3203.05224609375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.5610299110412598,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.36328125,
+                "infer_mem_end": 3196.314453125
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 0.5897557735443115,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.32861328125,
+                "infer_mem_end": 3195.27978515625
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 1.1920075416564941,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 217.32421875,
+                "infer_mem_end": 3214.275390625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.5579085350036621,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.716796875,
+                "infer_mem_end": 3195.66796875
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 0.5632836818695068,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.4345703125,
+                "infer_mem_end": 3197.3857421875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.5811023712158203,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.97509765625,
+                "infer_mem_end": 3195.92626953125
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 0.88852858543396,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 0.8973712921142578,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.91845703125,
+                "infer_mem_end": 3204.86962890625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.971904993057251,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.91796875,
+                "infer_mem_end": 3197.869140625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.9960651397705078,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2626953125,
+                "infer_mem_end": 3201.2138671875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.571049690246582,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.845703125,
+                "infer_mem_end": 3195.796875
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 10.444035291671753,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 1091.25927734375,
+                "infer_mem_end": 4088.21044921875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.6969494819641113,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.5571017265319824,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.1044921875,
+                "infer_mem_end": 3196.0556640625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 1.0919561386108398,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.14111328125,
+                "infer_mem_end": 3208.09228515625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.580338716506958,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.97509765625,
+                "infer_mem_end": 3195.92626953125
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 0.8789012432098389,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.75,
+                "infer_mem_end": 3203.701171875
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.5895681381225586,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.318359375,
+                "infer_mem_end": 3197.26953125
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 1.1108815670013428,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.27197265625,
+                "infer_mem_end": 3201.22314453125
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 0.9011509418487549,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.490234375,
+                "infer_mem_end": 3203.44140625
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.0071520805358887,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.60107421875,
+                "infer_mem_end": 3199.55224609375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.9737987518310547,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.52978515625,
+                "infer_mem_end": 3197.48095703125
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 3.3206286430358887,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 426.43359375,
+                "infer_mem_end": 3423.384765625
+            },
+            {
+                "predict": "B",
+                "reference": "A",
+                "infer_time": 1.3888201713562012,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 249.31591796875,
+                "infer_mem_end": 3246.26708984375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.4016296863555908,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 250.36279296875,
+                "infer_mem_end": 3247.31396484375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 2.1837234497070312,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 383.9306640625,
+                "infer_mem_end": 3380.8818359375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.9532735347747803,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.98974609375,
+                "infer_mem_end": 3199.94091796875
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 1.0576701164245605,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.71240234375,
+                "infer_mem_end": 3208.66357421875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.8572461605072021,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.009765625,
+                "infer_mem_end": 3203.9609375
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 1.4583146572113037,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 223.14404296875,
+                "infer_mem_end": 3220.09521484375
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 1.0592727661132812,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.4150390625,
+                "infer_mem_end": 3201.3662109375
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.984623908996582,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.91796875,
+                "infer_mem_end": 3197.869140625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.0037498474121094,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.6591796875,
+                "infer_mem_end": 3197.6103515625
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 0.8833301067352295,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.36083984375,
+                "infer_mem_end": 3203.31201171875
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 0.9961447715759277,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.60107421875,
+                "infer_mem_end": 3199.55224609375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.6102991104125977,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.716796875,
+                "infer_mem_end": 3195.66796875
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.5745048522949219,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.23388671875,
+                "infer_mem_end": 3196.18505859375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 1.160966396331787,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 214.458984375,
+                "infer_mem_end": 3211.41015625
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 1.3999876976013184,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 218.0146484375,
+                "infer_mem_end": 3214.9658203125
+            },
+            {
+                "predict": "B",
+                "reference": "A",
+                "infer_time": 0.839031457901001,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 205.7119140625,
+                "infer_mem_end": 3202.6630859375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.5749750137329102,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.1044921875,
+                "infer_mem_end": 3196.0556640625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.9895696640014648,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.341796875,
+                "infer_mem_end": 3199.29296875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.985584020614624,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.91796875,
+                "infer_mem_end": 3197.869140625
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 0.7406799793243408,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.5732355117797852,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.6826171875,
+                "infer_mem_end": 3194.6337890625
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 1.0007634162902832,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 208.5673828125,
+                "infer_mem_end": 3205.5185546875
+            },
+            {
+                "predict": "B",
+                "reference": "D",
+                "infer_time": 1.3716025352478027,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 218.81787109375,
+                "infer_mem_end": 3215.76904296875
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 1.0604329109191895,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.71240234375,
+                "infer_mem_end": 3208.66357421875
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 0.9595935344696045,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.341796875,
+                "infer_mem_end": 3199.29296875
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 0.5702927112579346,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.1044921875,
+                "infer_mem_end": 3196.0556640625
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 0.8980963230133057,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.91845703125,
+                "infer_mem_end": 3204.86962890625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.1141834259033203,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.28125,
+                "infer_mem_end": 3201.232421875
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 0.9005603790283203,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.8873679637908936,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 205.9716796875,
+                "infer_mem_end": 3202.9228515625
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 0.9038810729980469,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.5998568534851074,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.4345703125,
+                "infer_mem_end": 3197.3857421875
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 0.5887231826782227,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.6826171875,
+                "infer_mem_end": 3194.6337890625
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 1.0396819114685059,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.0830078125,
+                "infer_mem_end": 3199.0341796875
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 1.0392656326293945,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.60107421875,
+                "infer_mem_end": 3199.55224609375
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 1.0214312076568604,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.400390625,
+                "infer_mem_end": 3197.3515625
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.9926142692565918,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.73046875,
+                "infer_mem_end": 3199.681640625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.578341007232666,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.37646484375,
+                "infer_mem_end": 3197.32763671875
+            },
+            {
+                "predict": "B",
+                "reference": "C",
+                "infer_time": 1.943681001663208,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 336.11572265625,
+                "infer_mem_end": 3333.06689453125
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 1.11106538772583,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.48388671875,
+                "infer_mem_end": 3208.43505859375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.9422848224639893,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.400390625,
+                "infer_mem_end": 3197.3515625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 1.9177446365356445,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 325.49072265625,
+                "infer_mem_end": 3322.44189453125
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 1.4212160110473633,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 245.12841796875,
+                "infer_mem_end": 3242.07958984375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 2.4721925258636475,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 386.0556640625,
+                "infer_mem_end": 3383.0068359375
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 1.4818711280822754,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 290.42822265625,
+                "infer_mem_end": 3287.37939453125
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 0.6997947692871094,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 0.7086653709411621,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 1.0604772567749023,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2763671875,
+                "infer_mem_end": 3201.2275390625
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 0.7435903549194336,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 2.349929094314575,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 382.8681640625,
+                "infer_mem_end": 3379.8193359375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 1.0850157737731934,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.98974609375,
+                "infer_mem_end": 3199.94091796875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.0713558197021484,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 201.1767578125,
+                "infer_mem_end": 3198.1279296875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.022916316986084,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2490234375,
+                "infer_mem_end": 3201.2001953125
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.5699179172515869,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.19921875,
+                "infer_mem_end": 3195.150390625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.98868727684021,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 201.30615234375,
+                "infer_mem_end": 3198.25732421875
+            }
+        ]
+    },
+    {
+        "Train": {
+            "train_time": 610.9923067092896,
+            "train_mem_init": 2996.951171875,
+            "train_mem_use": 6630.76708984375,
+            "train_mem_end": 9627.71826171875
+        },
+        "Evaluate": [
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.9925622940063477,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.23388671875,
+                "infer_mem_end": 3196.18505859375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 2.099278688430786,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.25537109375,
+                "infer_mem_end": 3208.20654296875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.1503872871398926,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.010448932647705,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.845703125,
+                "infer_mem_end": 3195.796875
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 1.0468628406524658,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2578125,
+                "infer_mem_end": 3201.208984375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.6499371528625488,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.25341796875,
+                "infer_mem_end": 3201.20458984375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.0360002517700195,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 322.40478515625,
+                "infer_mem_end": 3319.35595703125
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 0.5351190567016602,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.49267578125,
+                "infer_mem_end": 3197.44384765625
+            },
+            {
+                "predict": "B",
+                "reference": "C",
+                "infer_time": 1.2021434307098389,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 357.3681640625,
+                "infer_mem_end": 3354.3193359375
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 0.6459887027740479,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.25341796875,
+                "infer_mem_end": 3201.20458984375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 0.60308837890625,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 0.6073164939880371,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 205.841796875,
+                "infer_mem_end": 3202.79296875
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.6247081756591797,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.6591796875,
+                "infer_mem_end": 3197.6103515625
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 0.4899735450744629,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.8115234375,
+                "infer_mem_end": 3194.7626953125
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 0.7746636867523193,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 214.34423828125,
+                "infer_mem_end": 3211.29541015625
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 1.0289041996002197,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 288.30322265625,
+                "infer_mem_end": 3285.25439453125
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 0.5959475040435791,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.544921875,
+                "infer_mem_end": 3201.49609375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.4900205135345459,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.8115234375,
+                "infer_mem_end": 3194.7626953125
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.615431547164917,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.009765625,
+                "infer_mem_end": 3203.9609375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.0017380714416504,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 336.11572265625,
+                "infer_mem_end": 3333.06689453125
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 0.6105473041534424,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.10107421875,
+                "infer_mem_end": 3203.05224609375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.504180908203125,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.36328125,
+                "infer_mem_end": 3196.314453125
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 0.5425653457641602,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.32861328125,
+                "infer_mem_end": 3195.27978515625
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 0.7926170825958252,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 217.32421875,
+                "infer_mem_end": 3214.275390625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.520329475402832,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.716796875,
+                "infer_mem_end": 3195.66796875
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 0.517935037612915,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.4345703125,
+                "infer_mem_end": 3197.3857421875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.5186786651611328,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.97509765625,
+                "infer_mem_end": 3195.92626953125
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 0.6565876007080078,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 0.7413930892944336,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.91845703125,
+                "infer_mem_end": 3204.86962890625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.7677137851715088,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.91796875,
+                "infer_mem_end": 3197.869140625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.6788160800933838,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2626953125,
+                "infer_mem_end": 3201.2138671875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.5144636631011963,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.845703125,
+                "infer_mem_end": 3195.796875
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 2.439911365509033,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 1091.25927734375,
+                "infer_mem_end": 4088.21044921875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.44692277908325195,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.46622633934020996,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.1044921875,
+                "infer_mem_end": 3196.0556640625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.7686855792999268,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.14111328125,
+                "infer_mem_end": 3208.09228515625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.4894282817840576,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.97509765625,
+                "infer_mem_end": 3195.92626953125
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 0.6353564262390137,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.75,
+                "infer_mem_end": 3203.701171875
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.5103492736816406,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.318359375,
+                "infer_mem_end": 3197.26953125
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.6605651378631592,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.27197265625,
+                "infer_mem_end": 3201.22314453125
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 0.6299848556518555,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.490234375,
+                "infer_mem_end": 3203.44140625
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.6574575901031494,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.60107421875,
+                "infer_mem_end": 3199.55224609375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.6460723876953125,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.52978515625,
+                "infer_mem_end": 3197.48095703125
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 1.3516974449157715,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 426.43359375,
+                "infer_mem_end": 3423.384765625
+            },
+            {
+                "predict": "B",
+                "reference": "A",
+                "infer_time": 0.822742223739624,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 249.31591796875,
+                "infer_mem_end": 3246.26708984375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.8463571071624756,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 250.36279296875,
+                "infer_mem_end": 3247.31396484375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.0685679912567139,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 383.9306640625,
+                "infer_mem_end": 3380.8818359375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.6185622215270996,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.98974609375,
+                "infer_mem_end": 3199.94091796875
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 0.7589330673217773,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.71240234375,
+                "infer_mem_end": 3208.66357421875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.5974164009094238,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.009765625,
+                "infer_mem_end": 3203.9609375
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 0.8671078681945801,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 223.14404296875,
+                "infer_mem_end": 3220.09521484375
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 0.6455585956573486,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.4150390625,
+                "infer_mem_end": 3201.3662109375
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.6280367374420166,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.91796875,
+                "infer_mem_end": 3197.869140625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.6388070583343506,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.6591796875,
+                "infer_mem_end": 3197.6103515625
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 0.6225178241729736,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.36083984375,
+                "infer_mem_end": 3203.31201171875
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 0.6506650447845459,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.60107421875,
+                "infer_mem_end": 3199.55224609375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.5099759101867676,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.716796875,
+                "infer_mem_end": 3195.66796875
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.5189919471740723,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.23388671875,
+                "infer_mem_end": 3196.18505859375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 0.7889986038208008,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 214.458984375,
+                "infer_mem_end": 3211.41015625
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 0.881119966506958,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 218.0146484375,
+                "infer_mem_end": 3214.9658203125
+            },
+            {
+                "predict": "B",
+                "reference": "A",
+                "infer_time": 0.6175224781036377,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 205.7119140625,
+                "infer_mem_end": 3202.6630859375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.5056047439575195,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.1044921875,
+                "infer_mem_end": 3196.0556640625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.6491944789886475,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.341796875,
+                "infer_mem_end": 3199.29296875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.6426973342895508,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.91796875,
+                "infer_mem_end": 3197.869140625
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 0.5072481632232666,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.5164809226989746,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.6826171875,
+                "infer_mem_end": 3194.6337890625
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 0.6630213260650635,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 208.5673828125,
+                "infer_mem_end": 3205.5185546875
+            },
+            {
+                "predict": "B",
+                "reference": "D",
+                "infer_time": 0.889901876449585,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 218.81787109375,
+                "infer_mem_end": 3215.76904296875
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 0.7591898441314697,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.71240234375,
+                "infer_mem_end": 3208.66357421875
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 0.6184563636779785,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.341796875,
+                "infer_mem_end": 3199.29296875
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 0.4930238723754883,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.1044921875,
+                "infer_mem_end": 3196.0556640625
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 0.6490015983581543,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.91845703125,
+                "infer_mem_end": 3204.86962890625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.6576721668243408,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.28125,
+                "infer_mem_end": 3201.232421875
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 0.6454181671142578,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.636223316192627,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 205.9716796875,
+                "infer_mem_end": 3202.9228515625
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 0.6511588096618652,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.505629301071167,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.4345703125,
+                "infer_mem_end": 3197.3857421875
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 0.5079765319824219,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.6826171875,
+                "infer_mem_end": 3194.6337890625
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 0.6547520160675049,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.0830078125,
+                "infer_mem_end": 3199.0341796875
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 0.6715538501739502,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.60107421875,
+                "infer_mem_end": 3199.55224609375
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 0.642242431640625,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.400390625,
+                "infer_mem_end": 3197.3515625
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.6524932384490967,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.73046875,
+                "infer_mem_end": 3199.681640625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.4945335388183594,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.37646484375,
+                "infer_mem_end": 3197.32763671875
+            },
+            {
+                "predict": "B",
+                "reference": "C",
+                "infer_time": 1.0427312850952148,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 336.11572265625,
+                "infer_mem_end": 3333.06689453125
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 0.7753024101257324,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.48388671875,
+                "infer_mem_end": 3208.43505859375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.6527962684631348,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.400390625,
+                "infer_mem_end": 3197.3515625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.9899084568023682,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 325.49072265625,
+                "infer_mem_end": 3322.44189453125
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 0.8758938312530518,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 245.12841796875,
+                "infer_mem_end": 3242.07958984375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 1.1163280010223389,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 386.0556640625,
+                "infer_mem_end": 3383.0068359375
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.9057636260986328,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 290.42822265625,
+                "infer_mem_end": 3287.37939453125
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 0.4697573184967041,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 0.49231457710266113,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.6590061187744141,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2763671875,
+                "infer_mem_end": 3201.2275390625
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 0.5099506378173828,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 1.1570537090301514,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 382.8681640625,
+                "infer_mem_end": 3379.8193359375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 0.6298580169677734,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.98974609375,
+                "infer_mem_end": 3199.94091796875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.6309452056884766,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 201.1767578125,
+                "infer_mem_end": 3198.1279296875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.6370339393615723,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2490234375,
+                "infer_mem_end": 3201.2001953125
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.48764967918395996,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.19921875,
+                "infer_mem_end": 3195.150390625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.6445310115814209,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 201.30615234375,
+                "infer_mem_end": 3198.25732421875
+            }
+        ]
+    },
+    {
+        "Train": {
+            "train_time": "ERROR",
+            "train_mem_init": "ERROR",
+            "train_mem_use": "ERROR",
+            "train_mem_end": "ERROR"
+        },
+        "Evaluate": [
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 2.0835120677948,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 254.1904296875,
+                "infer_mem_end": 3251.1416015625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 5.702953338623047,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 339.59716796875,
+                "infer_mem_end": 3336.54833984375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 2.929861545562744,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 262.82861328125,
+                "infer_mem_end": 3259.77978515625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.526611328125,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 250.97802734375,
+                "infer_mem_end": 3247.92919921875
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 3.507777214050293,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 289.9072265625,
+                "infer_mem_end": 3286.8583984375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 3.4777321815490723,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 288.9609375,
+                "infer_mem_end": 3285.912109375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 2.559697151184082,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 595.1630859375,
+                "infer_mem_end": 3592.1142578125
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 1.5221951007843018,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 256.33203125,
+                "infer_mem_end": 3253.283203125
+            },
+            {
+                "predict": "B",
+                "reference": "C",
+                "infer_time": 6.160671234130859,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 663.79833984375,
+                "infer_mem_end": 3660.74951171875
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 3.447183847427368,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 288.9609375,
+                "infer_mem_end": 3285.912109375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 2.2687923908233643,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 320.5947265625,
+                "infer_mem_end": 3317.5458984375
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 2.2889516353607178,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 308.8115234375,
+                "infer_mem_end": 3305.7626953125
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 3.438714027404785,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 265.9716796875,
+                "infer_mem_end": 3262.9228515625
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 1.5413074493408203,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 242.412109375,
+                "infer_mem_end": 3239.36328125
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 3.5350911617279053,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 368.44873046875,
+                "infer_mem_end": 3365.39990234375
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 5.005131244659424,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 536.3349609375,
+                "infer_mem_end": 3533.2861328125
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 2.2420318126678467,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 298.1005859375,
+                "infer_mem_end": 3295.0517578125
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.5087239742279053,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 242.412109375,
+                "infer_mem_end": 3239.36328125
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 2.253984212875366,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 318.4521484375,
+                "infer_mem_end": 3315.4033203125
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 5.038954257965088,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 624.5771484375,
+                "infer_mem_end": 3621.5283203125
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 2.305906057357788,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 310.95361328125,
+                "infer_mem_end": 3307.90478515625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.565209150314331,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 255.26123046875,
+                "infer_mem_end": 3252.21240234375
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 1.5675013065338135,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 246.6953125,
+                "infer_mem_end": 3243.646484375
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 3.431666851043701,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 396.14013671875,
+                "infer_mem_end": 3393.09130859375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.5330140590667725,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 250.8603515625,
+                "infer_mem_end": 3247.8115234375
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 1.5414433479309082,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 257.40283203125,
+                "infer_mem_end": 3254.35400390625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.5353147983551025,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 252.048828125,
+                "infer_mem_end": 3249.0
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 2.284740686416626,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 320.5947265625,
+                "infer_mem_end": 3317.5458984375
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 1.1495463848114014,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 323.80859375,
+                "infer_mem_end": 3320.759765625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 3.4229252338409424,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 268.11328125,
+                "infer_mem_end": 3265.064453125
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 3.462120294570923,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 290.85302734375,
+                "infer_mem_end": 3287.80419921875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.5236880779266357,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 250.97802734375,
+                "infer_mem_end": 3247.92919921875
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 17.243267059326172,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 2012.94921875,
+                "infer_mem_end": 5009.900390625
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 2.974897623062134,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 262.82861328125,
+                "infer_mem_end": 3259.77978515625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.522817611694336,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 253.11962890625,
+                "infer_mem_end": 3250.07080078125
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 5.295427083969116,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 338.54150390625,
+                "infer_mem_end": 3335.49267578125
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.572770357131958,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 252.048828125,
+                "infer_mem_end": 3249.0
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 2.267770290374756,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 316.3095703125,
+                "infer_mem_end": 3313.2607421875
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.5257575511932373,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 259.5439453125,
+                "infer_mem_end": 3256.4951171875
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 3.4794464111328125,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 292.7451171875,
+                "infer_mem_end": 3289.6962890625
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 2.3535799980163574,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 314.16748046875,
+                "infer_mem_end": 3311.11865234375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 3.484480619430542,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 282.03515625,
+                "infer_mem_end": 3278.986328125
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 3.4110517501831055,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 264.90087890625,
+                "infer_mem_end": 3261.85205078125
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 8.351447343826294,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 791.26171875,
+                "infer_mem_end": 3788.212890625
+            },
+            {
+                "predict": "B",
+                "reference": "A",
+                "infer_time": 3.9430010318756104,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 463.92626953125,
+                "infer_mem_end": 3460.87744140625
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 3.962290048599243,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 465.87939453125,
+                "infer_mem_end": 3462.83056640625
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 6.177020072937012,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 713.32177734375,
+                "infer_mem_end": 3710.27294921875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 3.4576871395111084,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 286.123046875,
+                "infer_mem_end": 3283.07421875
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 5.409375429153442,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 343.8203125,
+                "infer_mem_end": 3340.771484375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.1344587802886963,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 316.3095703125,
+                "infer_mem_end": 3313.2607421875
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 3.881540536880493,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 419.08251953125,
+                "infer_mem_end": 3416.03369140625
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 2.5708494186401367,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 297.029296875,
+                "infer_mem_end": 3293.98046875
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 3.4214272499084473,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 268.11328125,
+                "infer_mem_end": 3265.064453125
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 3.401174306869507,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 265.9716796875,
+                "infer_mem_end": 3262.9228515625
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 2.272559881210327,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 313.09619140625,
+                "infer_mem_end": 3310.04736328125
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 3.430333375930786,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 282.03515625,
+                "infer_mem_end": 3278.986328125
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.5267658233642578,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 250.8603515625,
+                "infer_mem_end": 3247.8115234375
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 1.5202796459197998,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 254.1904296875,
+                "infer_mem_end": 3251.1416015625
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 3.459596872329712,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 369.43408203125,
+                "infer_mem_end": 3366.38525390625
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 3.9899184703826904,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 401.9404296875,
+                "infer_mem_end": 3398.8916015625
+            },
+            {
+                "predict": "B",
+                "reference": "A",
+                "infer_time": 1.6931538581848145,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 306.66943359375,
+                "infer_mem_end": 3303.62060546875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.550912618637085,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 253.11962890625,
+                "infer_mem_end": 3250.07080078125
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 3.450033664703369,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 279.89306640625,
+                "infer_mem_end": 3276.84423828125
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 3.422637701034546,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 268.11328125,
+                "infer_mem_end": 3265.064453125
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 2.927492141723633,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 262.82861328125,
+                "infer_mem_end": 3259.77978515625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.53904390335083,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 241.341796875,
+                "infer_mem_end": 3238.29296875
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 4.563025951385498,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 333.28564453125,
+                "infer_mem_end": 3330.23681640625
+            },
+            {
+                "predict": "B",
+                "reference": "D",
+                "infer_time": 3.9775495529174805,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 410.06787109375,
+                "infer_mem_end": 3407.01904296875
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 5.405914783477783,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 343.8203125,
+                "infer_mem_end": 3340.771484375
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 3.4280035495758057,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 279.89306640625,
+                "infer_mem_end": 3276.84423828125
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 1.5224578380584717,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 253.11962890625,
+                "infer_mem_end": 3250.07080078125
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 2.2765555381774902,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 325.951171875,
+                "infer_mem_end": 3322.90234375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 3.1630964279174805,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 294.88720703125,
+                "infer_mem_end": 3291.83837890625
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 2.298192262649536,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 320.5947265625,
+                "infer_mem_end": 3317.5458984375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 2.254826545715332,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 309.8828125,
+                "infer_mem_end": 3306.833984375
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 2.2596967220306396,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 320.5947265625,
+                "infer_mem_end": 3317.5458984375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.5223791599273682,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 257.40283203125,
+                "infer_mem_end": 3254.35400390625
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 1.5121996402740479,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 241.341796875,
+                "infer_mem_end": 3238.29296875
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 3.4277827739715576,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 277.75146484375,
+                "infer_mem_end": 3274.70263671875
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 3.4663710594177246,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 282.03515625,
+                "infer_mem_end": 3278.986328125
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 3.4208006858825684,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 263.830078125,
+                "infer_mem_end": 3260.78125
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 3.4683516025543213,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 283.10595703125,
+                "infer_mem_end": 3280.05712890625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.5460877418518066,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 258.5361328125,
+                "infer_mem_end": 3255.4873046875
+            },
+            {
+                "predict": "B",
+                "reference": "C",
+                "infer_time": 5.141081809997559,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 624.5771484375,
+                "infer_mem_end": 3621.5283203125
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 5.4003167152404785,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 341.70849609375,
+                "infer_mem_end": 3338.65966796875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 3.478973627090454,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 263.830078125,
+                "infer_mem_end": 3260.78125
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 4.9999213218688965,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 604.9677734375,
+                "infer_mem_end": 3601.9189453125
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 4.053393840789795,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 456.11376953125,
+                "infer_mem_end": 3453.06494140625
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 6.075688123703003,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 717.18115234375,
+                "infer_mem_end": 3714.13232421875
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 2.554271936416626,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 536.3349609375,
+                "infer_mem_end": 3533.2861328125
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 2.938115358352661,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 262.82861328125,
+                "infer_mem_end": 3259.77978515625
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 3.0128912925720215,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 262.82861328125,
+                "infer_mem_end": 3259.77978515625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 3.545042037963867,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 293.81591796875,
+                "infer_mem_end": 3290.76708984375
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 2.982269525527954,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 262.82861328125,
+                "infer_mem_end": 3259.77978515625
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 6.393132448196411,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 711.39208984375,
+                "infer_mem_end": 3708.34326171875
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 3.5874736309051514,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 286.123046875,
+                "infer_mem_end": 3283.07421875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 3.4655041694641113,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 270.2548828125,
+                "infer_mem_end": 3267.2060546875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 3.522181987762451,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 288.01513671875,
+                "infer_mem_end": 3284.96630859375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.5520896911621094,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 245.62451171875,
+                "infer_mem_end": 3242.57568359375
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 3.4192955493927,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 271.32568359375,
+                "infer_mem_end": 3268.27685546875
+            }
+        ]
+    },
+    {
+        "Train": {
+            "train_time": 420.8415060043335,
+            "train_mem_init": 2996.951171875,
+            "train_mem_use": 5913.75341796875,
+            "train_mem_end": 8910.70458984375
+        },
+        "Evaluate": [
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.1817994117736816,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.23388671875,
+                "infer_mem_end": 3196.18505859375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 2.1493563652038574,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.25537109375,
+                "infer_mem_end": 3208.20654296875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.9583621025085449,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.8868808746337891,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.845703125,
+                "infer_mem_end": 3195.796875
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 1.0905702114105225,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2578125,
+                "infer_mem_end": 3201.208984375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.7323060035705566,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.25341796875,
+                "infer_mem_end": 3201.20458984375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.1540794372558594,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 322.40478515625,
+                "infer_mem_end": 3319.35595703125
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 0.512791633605957,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.49267578125,
+                "infer_mem_end": 3197.44384765625
+            },
+            {
+                "predict": "B",
+                "reference": "C",
+                "infer_time": 1.1535658836364746,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 357.3681640625,
+                "infer_mem_end": 3354.3193359375
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 0.6475462913513184,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.25341796875,
+                "infer_mem_end": 3201.20458984375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 0.6266019344329834,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 0.6278591156005859,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 205.841796875,
+                "infer_mem_end": 3202.79296875
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.6666572093963623,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.6591796875,
+                "infer_mem_end": 3197.6103515625
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 0.4778139591217041,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.8115234375,
+                "infer_mem_end": 3194.7626953125
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 0.7584047317504883,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 214.34423828125,
+                "infer_mem_end": 3211.29541015625
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 0.9926474094390869,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 288.30322265625,
+                "infer_mem_end": 3285.25439453125
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 0.591663122177124,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.544921875,
+                "infer_mem_end": 3201.49609375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.4856741428375244,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.8115234375,
+                "infer_mem_end": 3194.7626953125
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 0.6419792175292969,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.009765625,
+                "infer_mem_end": 3203.9609375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.0532763004302979,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 336.11572265625,
+                "infer_mem_end": 3333.06689453125
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 0.6379756927490234,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.10107421875,
+                "infer_mem_end": 3203.05224609375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.5023069381713867,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.36328125,
+                "infer_mem_end": 3196.314453125
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 0.5359013080596924,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.32861328125,
+                "infer_mem_end": 3195.27978515625
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 0.7601795196533203,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 217.32421875,
+                "infer_mem_end": 3214.275390625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.4880208969116211,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.716796875,
+                "infer_mem_end": 3195.66796875
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 0.523932933807373,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.4345703125,
+                "infer_mem_end": 3197.3857421875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 0.513606071472168,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.97509765625,
+                "infer_mem_end": 3195.92626953125
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 0.639939546585083,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 0.6292157173156738,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.91845703125,
+                "infer_mem_end": 3204.86962890625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.6481711864471436,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.91796875,
+                "infer_mem_end": 3197.869140625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 0.6593763828277588,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2626953125,
+                "infer_mem_end": 3201.2138671875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 0.5038642883300781,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.845703125,
+                "infer_mem_end": 3195.796875
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 11.827031373977661,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 1091.25927734375,
+                "infer_mem_end": 4088.21044921875
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.4138004779815674,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.4086918830871582,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.1044921875,
+                "infer_mem_end": 3196.0556640625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 2.6745076179504395,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.14111328125,
+                "infer_mem_end": 3208.09228515625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.3946921825408936,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.97509765625,
+                "infer_mem_end": 3195.92626953125
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 1.701946496963501,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.75,
+                "infer_mem_end": 3203.701171875
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.4476118087768555,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.318359375,
+                "infer_mem_end": 3197.26953125
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 2.7152836322784424,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.27197265625,
+                "infer_mem_end": 3201.22314453125
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 1.6649360656738281,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.490234375,
+                "infer_mem_end": 3203.44140625
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 2.6791625022888184,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.60107421875,
+                "infer_mem_end": 3199.55224609375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 2.6954503059387207,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.52978515625,
+                "infer_mem_end": 3197.48095703125
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 4.633411884307861,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 426.43359375,
+                "infer_mem_end": 3423.384765625
+            },
+            {
+                "predict": "B",
+                "reference": "A",
+                "infer_time": 2.528980255126953,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 249.31591796875,
+                "infer_mem_end": 3246.26708984375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 2.5297977924346924,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 250.36279296875,
+                "infer_mem_end": 3247.31396484375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 3.771005868911743,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 383.9306640625,
+                "infer_mem_end": 3380.8818359375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 2.8070080280303955,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.98974609375,
+                "infer_mem_end": 3199.94091796875
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 2.6923694610595703,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.71240234375,
+                "infer_mem_end": 3208.66357421875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.7079226970672607,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.009765625,
+                "infer_mem_end": 3203.9609375
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 2.5496881008148193,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 223.14404296875,
+                "infer_mem_end": 3220.09521484375
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 2.7222788333892822,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.4150390625,
+                "infer_mem_end": 3201.3662109375
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 2.6709325313568115,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.91796875,
+                "infer_mem_end": 3197.869140625
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 2.6392595767974854,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.6591796875,
+                "infer_mem_end": 3197.6103515625
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 1.6477763652801514,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 206.36083984375,
+                "infer_mem_end": 3203.31201171875
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 2.7169301509857178,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.60107421875,
+                "infer_mem_end": 3199.55224609375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.4090187549591064,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.716796875,
+                "infer_mem_end": 3195.66796875
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 1.4237587451934814,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.23388671875,
+                "infer_mem_end": 3196.18505859375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 2.4822540283203125,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 214.458984375,
+                "infer_mem_end": 3211.41015625
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 2.512984037399292,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 218.0146484375,
+                "infer_mem_end": 3214.9658203125
+            },
+            {
+                "predict": "B",
+                "reference": "A",
+                "infer_time": 1.822087287902832,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 205.7119140625,
+                "infer_mem_end": 3202.6630859375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 1.4410433769226074,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.1044921875,
+                "infer_mem_end": 3196.0556640625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 2.7123312950134277,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.341796875,
+                "infer_mem_end": 3199.29296875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 2.7367992401123047,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.91796875,
+                "infer_mem_end": 3197.869140625
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 1.4368293285369873,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.4172124862670898,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.6826171875,
+                "infer_mem_end": 3194.6337890625
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 1.6817307472229004,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 208.5673828125,
+                "infer_mem_end": 3205.5185546875
+            },
+            {
+                "predict": "B",
+                "reference": "D",
+                "infer_time": 2.557974100112915,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 218.81787109375,
+                "infer_mem_end": 3215.76904296875
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 2.771087169647217,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.71240234375,
+                "infer_mem_end": 3208.66357421875
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 2.7496132850646973,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.341796875,
+                "infer_mem_end": 3199.29296875
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 1.4437448978424072,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 199.1044921875,
+                "infer_mem_end": 3196.0556640625
+            },
+            {
+                "predict": "A",
+                "reference": "C",
+                "infer_time": 1.683389663696289,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.91845703125,
+                "infer_mem_end": 3204.86962890625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 2.691331624984741,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.28125,
+                "infer_mem_end": 3201.232421875
+            },
+            {
+                "predict": "B",
+                "reference": "B",
+                "infer_time": 1.6823904514312744,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.7736225128173828,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 205.9716796875,
+                "infer_mem_end": 3202.9228515625
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 1.6670763492584229,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 207.26904296875,
+                "infer_mem_end": 3204.22021484375
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.4231915473937988,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.4345703125,
+                "infer_mem_end": 3197.3857421875
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 1.4310848712921143,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 197.6826171875,
+                "infer_mem_end": 3194.6337890625
+            },
+            {
+                "predict": "A",
+                "reference": "A",
+                "infer_time": 2.6913793087005615,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.0830078125,
+                "infer_mem_end": 3199.0341796875
+            },
+            {
+                "predict": "D",
+                "reference": "C",
+                "infer_time": 2.6992404460906982,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.60107421875,
+                "infer_mem_end": 3199.55224609375
+            },
+            {
+                "predict": "A",
+                "reference": "D",
+                "infer_time": 2.8163933753967285,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.400390625,
+                "infer_mem_end": 3197.3515625
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 2.7725729942321777,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.73046875,
+                "infer_mem_end": 3199.681640625
+            },
+            {
+                "predict": "D",
+                "reference": "D",
+                "infer_time": 1.4123308658599854,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.37646484375,
+                "infer_mem_end": 3197.32763671875
+            },
+            {
+                "predict": "B",
+                "reference": "C",
+                "infer_time": 3.1455507278442383,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 336.11572265625,
+                "infer_mem_end": 3333.06689453125
+            },
+            {
+                "predict": "A",
+                "reference": "B",
+                "infer_time": 2.660135269165039,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 211.48388671875,
+                "infer_mem_end": 3208.43505859375
+            },
+            {
+                "predict": "D",
+                "reference": "A",
+                "infer_time": 2.679856538772583,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.400390625,
+                "infer_mem_end": 3197.3515625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 3.178311347961426,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 325.49072265625,
+                "infer_mem_end": 3322.44189453125
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 2.537173271179199,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 245.12841796875,
+                "infer_mem_end": 3242.07958984375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 3.790128707885742,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 386.0556640625,
+                "infer_mem_end": 3383.0068359375
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 3.327275037765503,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 290.42822265625,
+                "infer_mem_end": 3287.37939453125
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 1.4371418952941895,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "C",
+                "reference": "B",
+                "infer_time": 1.4466640949249268,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 2.6562862396240234,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2763671875,
+                "infer_mem_end": 3201.2275390625
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 1.4373555183410645,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 200.2685546875,
+                "infer_mem_end": 3197.2197265625
+            },
+            {
+                "predict": "C",
+                "reference": "C",
+                "infer_time": 3.7636563777923584,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 382.8681640625,
+                "infer_mem_end": 3379.8193359375
+            },
+            {
+                "predict": "C",
+                "reference": "A",
+                "infer_time": 2.6965150833129883,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 202.98974609375,
+                "infer_mem_end": 3199.94091796875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 2.639803886413574,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 201.1767578125,
+                "infer_mem_end": 3198.1279296875
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 2.6590187549591064,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 204.2490234375,
+                "infer_mem_end": 3201.2001953125
+            },
+            {
+                "predict": "D",
+                "reference": "B",
+                "infer_time": 1.3798606395721436,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 198.19921875,
+                "infer_mem_end": 3195.150390625
+            },
+            {
+                "predict": "C",
+                "reference": "D",
+                "infer_time": 2.652738571166992,
+                "infer_mem_init": 2996.951171875,
+                "infer_mem_use": 201.30615234375,
+                "infer_mem_end": 3198.25732421875
+            }
+        ]
+    }
+]

@@ -5,50 +5,16 @@ from transformers import AutoTokenizer,PreTrainedTokenizerBase
 import pandas as pd
 import random
 from sklearn.model_selection import train_test_split
-
-class data_tyle(Enum):
-    intents = 'intents.json'
-class data_processor:
-    def __init__(self) -> None:
-        pass
-    def process(self,input_path) -> list:
-        file_name = os.path.basename(input_path)
-        if (file_name == 'intents.json'):
-            return self._data_intents()
-    def _data_intents(self) -> list:
-        with open(folder_path.raw_data.intents,'r') as file:
-            raw_data = json.load(file)
-        data = []
-        for intent in raw_data['intents']:
-            for patternn in intent['patterns']:
-                data.append(f'User: {patternn}\n')
-                for response in intent['responses']:
-                    data.append(f'Assistant: {response}\n')
-        return data
-        
-class gpt2_data:
-    def __init__(self) -> None:
-        self.processor = data_processor()
-    def _preprocess(self,input_path) -> list:
-        return self.processor.process(input_path)
-    def _save(self,data,output_path):
-        with open(output_path,'w') as file:
-            data = ''.join(data)
-            file.write(data)
-    def process(self,type : data_tyle) -> str:
-        if (type == data_tyle.intents):
-            data = self._preprocess(folder_path.raw_data.intents)
-            self._save(data,folder_path.data.intents)
-            return folder_path.data.intents
         
 class causal_data:
-    def __init__(self,tokenizer,block_size : int = 128) -> None:
+    def __init__(self,tokenizer,block_size : int = 128,max_data_remember : int = 10) -> None:
         self.tokenizer : PreTrainedTokenizerBase = tokenizer
         self.block_size : int = block_size
         self.container : list = []
-    def add_data(self,user : str,asisstant : str):
-        self.container.append(user+'.'+asisstant)
+        self.max_remember = max_data_remember
     def add_data(self,text : str):
+        while (len(self.container) == self.max_remember):
+            self.container.pop(0)
         self.container.append(text)
     def empy(self):
         self.container = []
@@ -88,66 +54,50 @@ class causal_mmlu:
         'C' : 2,
         'D' : 3
     }
+    initialized = False
     raw_data_frame = pd.read_parquet(folder_path.data.mmlu_test)
-    data_frame : pd.DataFrame = pd.DataFrame(columns=['Content','Context'])
+    data_frame : pd.DataFrame = pd.DataFrame(columns=['Context','Question','Choices','Answer','Raw Choices'])
     @classmethod
     def _process_row(self,data_row : pd.Series):
         context = data_row['subject']
         question = data_row['question']
         choices = data_row['choices']
         options = f'{self.mapping[0]}: {choices[0]} {self.mapping[1]}: {choices[1]} {self.mapping[2]}: {choices[2]} {self.mapping[3]}: {choices[3]}'
-        answer = f'{self.mapping[data_row['answer']]}: {choices[data_row['answer']]}'
-        result = f'Context: {context}\nQuestion: {question}\nOptions: {options}\nAnswer: {answer}'
-        return [result,context]
+        answer = f"{self.mapping[data_row['answer']]}: {choices[data_row['answer']]}"
+        return [context,question,options,answer,choices]
     @classmethod
     def custom_init(self):
+        if (self.initialized == True):
+            return
+        self.initialized = True
         for index,row in self.raw_data_frame.iterrows():
             self.data_frame.loc[index] = self._process_row(row)
     @classmethod
-    def _get_single_data(self,dataframe : pd.DataFrame,k : int = 5, seed : int = 39):
-        result = []
-        sampled_data = dataframe.sample(n=k,random_state=seed)
-        for index,row in sampled_data.iterrows():
-            result.append(row['Content'])
-        last_ele = result[len(result)-1]
-        last_ele = last_ele.split('\nAnswer:')
-        answer = last_ele[1][1:]
-        last_ele = last_ele[0]
-        result[len(result)-1] = last_ele
-        return {
-            'Question' : result,
-            'Answer' : answer
+    def convert_to_data_point(self,row : pd.Series):
+        result = {
+            'Category Content' : None,
+            'Question' : None,
+            'Train' : None,
+            'Answer' : None,
+            'Category' : None,
         }
-    @classmethod
-    def get_single_data(self,context : str,k : int = 5,seed : int = 39):
-        filtered_data = self.data_frame[self.data_frame['Context'] == context]
-        result = self._get_single_data(filtered_data,k=k,seed=seed)
+        result['Answer'] = row['Answer']
+        result['Question'] = f'Question : ' + row['Question'] + '\nChoices : ' + row["Choices"] + '\nAnswer:'
+        result['Category Content'] = row["Question"] + ' ' +'. '.join(row["Raw Choices"])
+        result['Train'] = f'Question : ' + row['Question'] + '\nChoices : ' + row["Choices"] + '\nAnswer:' + row["Answer"]
+        result['Category'] = row['Context']
         return result
     @classmethod
-    def get_data(self,context,amount : int = 10,k : int = 5,seed : int = 39):
-        filtered_data = self.data_frame[self.data_frame['Context'] == context]
-        dataframe = filtered_data
+    def get_data(self,context = None,amount : int = 10,seed : int = 39):
+        if (context != None):
+            filtered_data = self.data_frame[self.data_frame['Context'] == context]
+            dataframe = filtered_data
+        else:
+            dataframe = self.data_frame
         result = []
-        sampled_datas = dataframe.sample(n=amount*k,random_state=seed)
-        total_it = 0
-        while len(result)<amount:
-            it = 0
-            question = []
-            while (it<k):
-                total_it += 1
-                it+=1
-                question.append(sampled_datas.iloc[total_it-1]['Content'])
-            last_ele = question[len(question)-1]
-            last_ele = last_ele.split('\nAnswer:')
-            answer = last_ele[1][1:]
-            last_ele = last_ele[0]
-            question[len(question)-1] = last_ele
-            qa = {
-                'Question' : question,
-                'Answer' : answer,
-                'Context' : context
-            }
-            result.append(qa)
+        sampled_datas = dataframe.sample(n=amount,random_state=seed)
+        for i in range(amount):
+            result.append(self.convert_to_data_point(sampled_datas.iloc[i]))
         return result
     
 class mmlu_category:

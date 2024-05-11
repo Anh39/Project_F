@@ -1,90 +1,142 @@
 import torch
-import evaluate
 from source import folder_path,data_processor,model_loader
-from source.model_loader import causal_model
+from source.model_loader import causal_lora_model
 from source.data_processor import mmlu_category,causal_data
-from source.train import handler
 import random
 import json
+import copy
 import time
 
-class causal_mmlu_eval:
-    def __init__(self,model : causal_model) -> None:
-        self.data_handler = data_processor.causal_mmlu()
-        self.data_handler.custom_init()
+class causal_mmlu_eval_unit:
+    def __init__(self,model : causal_lora_model,use_selector : bool = True) -> None:
         self.model = model
-        self.f1_eval = evaluate.load('f1')
-        self.accuracy_eval = evaluate.load('accuracy')
-        self.repeat = 4
-        self.trainer  = handler()
-        self.dp = causal_data(tokenizer=self.model.tokenizer,block_size=1024)
-    def _evaluate_base_single(self,test_data,k):
-        prompt = '\n'.join(test_data['Question'])
+        self.use_selector = use_selector
+        self.lr = 0.01
+    def train(self):
         device = torch.device("cuda")
-        
-        self.model.unload_hard()
-        start_time = time.time()
-
-        torch.cuda.reset_max_memory_allocated(device)
-        start_mem_use = torch.cuda.max_memory_allocated(device)/(1024*1024)
-        # print('Base inference')
-        # print('Bases: ',self.model.inference_base("Context: ",max_token=256))
-        result = self.model.inference_base(prompt,max_token=4)
-        end_mem_use = torch.cuda.max_memory_allocated(device)/(1024*1024)
-
-        end_time = time.time()
-        # print(result)
-        pred = result.split('Answer: ')[-1][:1]
-        ref = test_data['Answer'][:1]
-        # print(pred,ref)
-        return [pred,ref,end_time-start_time,start_mem_use,end_mem_use,end_mem_use-start_mem_use]
-    def _evaluate_lora_single(self,test_data,k):
-        train_data = '\n'.join(test_data['Question'][0:k-1])
-        prompt = '\n'.join(test_data['Question'])
-        device = torch.device("cuda")
-        
-        for i in range(self.repeat):
-            for j in range(k-1):
-                self.dp.add_data(test_data['Question'][j])
-        train_data = self.dp.get_data()
         try:
             torch.cuda.reset_max_memory_allocated(device)
-            start_train_mem_use = torch.cuda.max_memory_allocated(device)/(1024*1024)
-            start_train_time = time.time()
-            self.trainer.continue_train_gemma(self.model,train_dataset=train_data,epoch=1,lr=1e-3)
-            end_train_time = time.time()
-            end_train_mem_use = torch.cuda.max_memory_allocated(device)/(1024*1024)
-        except:
+            train_mem_init = torch.cuda.max_memory_allocated(device)/(1024*1024)
+            train_time = time.time()
+            self.model.train_all(epoch=1,lr=self.lr,weight_decay=0.01)
+            train_time = time.time() - train_time
+            train_mem_end = torch.cuda.max_memory_allocated(device)/(1024*1024)
+            train_mem_use = train_mem_end - train_mem_init
+        except Exception as e:
+            print(e)
+            train_mem_init = 'ERROR'
+            train_mem_end = 'ERROR'
+            train_mem_use = 'ERROR'
+            train_time = 'ERROR'
+        result = {
+            'train_time' : train_time,
+            'train_mem_init' : train_mem_init,
+            'train_mem_use' : train_mem_use,
+            'train_mem_end' : train_mem_end
+        }
+        return result
+    def add_data(self,data,category_or_category_content):
+        self.model.add_train_data(data,category_or_category_content,self.use_selector)
+    def train_selector(self,epoch=1,weight_decay=0.01):
+        self.model.train_selector(self.lr,epoch,weight_decay)
+    def evaluate(self,prompt,answer,category,category_content):
+        device = torch.device("cuda")
+        try:
             torch.cuda.reset_max_memory_allocated(device)
-            start_train_mem_use = torch.cuda.max_memory_allocated(device)/(1024*1024)
-            start_train_time = time.time()
-            self.trainer.train_gemma(self.model,train_dataset=train_data,epoch=1,lr=1e-3)
-            end_train_time = time.time()
-            end_train_mem_use = torch.cuda.max_memory_allocated(device)/(1024*1024)
-        start_time = time.time()
-        
-        torch.cuda.reset_max_memory_allocated(device)
-        start_mem_use = torch.cuda.max_memory_allocated(device)/(1024*1024)
-        #print('Lora inference')
-        # print('Loras: ',self.model.inference_lora("Context: ",max_token=256))
-        result = self.model.inference_lora(prompt,max_token=4)
-        end_mem_use = torch.cuda.max_memory_allocated(device)/(1024*1024)
-        end_time = time.time()  
-        #print(result)
-        for i in range(self.repeat):
-            self.dp.add_data(test_data['Question'][k-1] + '\nAnswer: ' + test_data['Answer'] )
-        pred = result.split('Answer: ')[-1][:1]
-        ref = test_data['Answer'][:1]
-        print(pred,ref)
-        return [pred,ref,end_time-start_time,start_mem_use,end_mem_use,end_mem_use-start_mem_use,end_train_time-start_train_time,
-                start_train_mem_use,end_train_mem_use,end_train_mem_use-start_train_mem_use]
-    def _dual_evaluate_single(self,category,seed,k):
-        test_data = self.data_handler.get_single_data(category,seed=seed,k=k)
-        base_res = self._evaluate_base_single(test_data,k)
-        lora_res = self._evaluate_lora_single(test_data,k)
-        base_res.append(category)
-        lora_res.append(category)
-        return (base_res,lora_res)
+            infer_mem_init = torch.cuda.max_memory_allocated(device)/(1024*1024)
+            infer_time = time.time()
+            result = self.model.auto_inference(prompt,max_token=1,category=category,category_content=category_content)
+            infer_time = time.time() - infer_time 
+            infer_mem_end = torch.cuda.max_memory_allocated(device)/(1024*1024)
+            infer_mem_use = infer_mem_end - infer_mem_init
+            pred = result.split('Answer: ')[-1][:1]
+            ref = answer[:1]
+        except Exception as e:
+            print(e)
+            infer_mem_init = 'ERROR'
+            infer_mem_end = 'ERROR'
+            infer_mem_use = 'ERROR'
+            infer_time = 'ERROR'
+        result = {
+            'predict' : pred,
+            'reference' : ref,
+            'infer_time' : infer_time,
+            'infer_mem_init' : infer_mem_init,
+            'infer_mem_use' : infer_mem_use,
+            'infer_mem_end' : infer_mem_end,
+            'adapter' : self.model.model.active_adapter
+        }
+        return result
+
+class causal_mmlu_eval:
+    def __init__(self,model : causal_lora_model,train_dataset,eval_dataset,step : int = 10,use_selector : bool = True,fixed_adapter : str = None) -> None:
+        self.unit = causal_mmlu_eval_unit(model,use_selector)
+        self.step = step
+        self.train_dataset = train_dataset
+        self.eval_dataset = eval_dataset
+        self.use_selector = use_selector
+        self.fixed_adapter = fixed_adapter
+        self.lr = 0.01
+        if (self.fixed_adapter != None):
+            self.unit.model._add_new_lora(self.fixed_adapter)
+    def _evaluate_all(self,use_category = False):
+        result = []
+        for data in self.eval_dataset:
+            current_data = data
+            # prompt = "Question : This is an example question ?\nChoices: A: answer 1. B: answer 2. C: answer 3. D: answer 4.\nAnswer : A: answer 1\n"
+            prompt = "Select correct answer, A or B or C or D.\n"
+            prompt += current_data['Question']
+            if (self.fixed_adapter != None):
+                temp_result = self.unit.evaluate(prompt,current_data['Answer'],category=self.fixed_adapter,category_content=current_data['Category Content'])
+            elif (use_category):
+                temp_result = self.unit.evaluate(prompt,current_data['Answer'],category=current_data['Category'],category_content=current_data['Category Content'])
+            else:
+                temp_result = self.unit.evaluate(prompt,current_data['Answer'],category=None,category_content=current_data['Category Content'])
+            result.append(temp_result)
+        return result
+    def _train_stage(self,its : list):
+        result = []
+        for it in its:
+            current_data = self.train_dataset[it]
+            if (self.fixed_adapter != None):
+                self.unit.add_data(current_data['Train'],self.fixed_adapter)
+            elif (self.use_selector):
+                self.unit.add_data(current_data['Train'],current_data['Category Content'])
+            else:
+                self.unit.add_data(current_data['Train'],current_data['Category'])
+        result = self.unit.train()
+        if (self.use_selector):
+            self.unit.train_selector()
+        return result
+    def save_result(self,result):
+        with open("result.json",'w') as file:
+            file.write(json.dumps(result))
+    def evaluate_and_train(self,start_from : int = 0,end_to : int = 0):
+        self.unit.lr = self.lr
+        result = []
+        its = []
+        e_res = []
+        for i in range(start_from,min(end_to,len(self.train_dataset))):
+            its.append(i)
+            print(i,len(its),self.step)
+            if (len(its) == self.step):
+                try:
+                    step_result = {
+                        'Train' : self._train_stage(its),
+                        'Evaluate' : self._evaluate_all()
+                    }
+                except Exception as e:
+                    print(e)
+                    e_res.append(e)
+                    try:
+                        with open('eres.txt','w') as file:
+                            file.write(json.dumps(e_res))
+                    except Exception as ee:
+                        print(ee)
+                result.append(step_result)
+                its = []
+            self.save_result(result)
+        return result
     def _dual_evaluate_all(self,category,seed,k,amount):
         if (category == None):
             datas = []
@@ -120,97 +172,16 @@ class causal_mmlu_eval:
         else:
             final_res = [base_results,lora_results]
         return final_res
-    def dual_random_evaluate_category(self,category = None,save : bool = False,num : int = 10,sample_amount : int = 5,ran_range : list = [1,1000000]):
-        seed_list = []
-        category_list = []
-        for i in range(num):
-            local_seed = random.randint(ran_range[0],ran_range[1])
-            seed_list.append(local_seed)
-            if (category == None):
-                local_category = mmlu_category.get_random(local_seed)
-                category_list.append(local_category)
-            else:
-                category_list.append(category)
-        
-        base_result = []
-        lora_result = []
-        
-        for i in range(len(category_list)):
-            try:
-                base_res,lora_res = self._dual_evaluate_single(category_list[i],seed_list[i],sample_amount)
-                base_result.append(base_res)
-                lora_result.append(lora_res)
-            except Exception as e:
-                print(e)    
-                
-        base_preds = []
-        base_refs = []
-        lora_preds = []
-        lora_refs = []
-        for ele in base_result:
-            base_preds.append(self.data_handler.reversed_mapping[ele[0]])
-            base_refs.append(self.data_handler.reversed_mapping[ele[1]])
-        for ele in lora_result:
-            lora_preds.append(self.data_handler.reversed_mapping[ele[0]])
-            lora_refs.append(self.data_handler.reversed_mapping[ele[1]])
-        base_f1_result = self.f1_eval.compute(
-            predictions=base_preds,
-            references=base_refs,
-            average='micro'
-        )
-        base_accuracy_result = self.accuracy_eval.compute(
-            predictions=base_preds,
-            references=base_refs
-        )
-        lora_f1_result = self.f1_eval.compute(
-            predictions=lora_preds,
-            references=lora_refs,
-            average='micro'
-        )
-        lora_accuracy_result = self.accuracy_eval.compute(
-            predictions=lora_preds,
-            references=lora_refs
-        )
-        
-        base_f1_result.update(base_accuracy_result)
-        lora_f1_result.update(lora_accuracy_result)
-        
-        base_eval_result = base_f1_result
-        lora_eval_result = lora_f1_result
 
-        if (save):
-            content = []
-            content.append({
-                'model_name' : self.model.name,
-                'sample_amount' : sample_amount,
-                'eval_amount' : len(base_result),
-                'base_f1' : base_eval_result['f1'],
-                'lora_f1' : lora_eval_result['f1']
-            })
-            for i in range(num):
-                try:
-                    line = {
-                        'seed' : seed_list[i],
-                        'category' : base_result[i][len(base_result[i])-1],
-                        'base_predict' : base_result[i][0],
-                        'base_answer' : base_result[i][1],
-                        'base_time' : base_result[i][2],
-                        'base_initial_memory' : base_result[i][3],
-                        'base_end_memory' : base_result[i][4],
-                        'base_inference_memory' : base_result[i][5],
-                        'lora_predict' : lora_result[i][0],
-                        'lora_answer' : lora_result[i][1],
-                        'lora_time' : lora_result[i][2],
-                        'lora_initial_memory' : lora_result[i][3],
-                        'lora_end_memory' : lora_result[i][4],
-                        'lora_inference_memory' : lora_result[i][5],
-                    }
-                    content.append(line)
-                except Exception as e:
-                    print(e)
-            with open(folder_path.output.eval_log,'w') as file:
-                file.write(json.dumps(content))
-        return (base_eval_result,lora_eval_result)
+class causal_mmlu_eval_old:
+
+    def _dual_evaluate_single(self,category,seed,k):
+        test_data = self.data_handler.get_single_data(category,seed=seed,k=k)
+        base_res = self._evaluate_base_single(test_data,k)
+        lora_res = self._evaluate_lora_single(test_data,k)
+        base_res.append(category)
+        lora_res.append(category)
+        return (base_res,lora_res)
     def dual_random_evaluate_category_separete(self,category = None,save : bool = False,num : int = 10,sample_amount : int = 5,seed : int = 39,ran_range : list = [1,1000000]):
         eval_res = self._dual_evaluate_all(category=category,seed=seed,k=sample_amount,amount=num)
         base_result = eval_res[0]

@@ -1,51 +1,36 @@
-import os
+import os,json
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
-from source.model_loader import gpt2,gemma2b
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 import torch
 import tensorflow as tf
+from sklearn.model_selection import train_test_split
 from source import folder_path
-from source.train import handler
-from source.data_processor import causal_data
+from source.model_loader import causal_lora_model
+from source.data_processor import causal_mmlu,mmlu_category,causal_data
+from source.evaluator import causal_mmlu_eval
+import utility,random
 
-torch.manual_seed(39)
+seed = 399884 # random.randint(1,999999)
+# with open('seed.txt','a') as file:
+#     file.write( str(seed)+'\n'  )
+torch.manual_seed(seed)
 
+model = causal_lora_model(folder_path.model.gemma,folder_path.output.gemma.path,lam=2,
+                          data_threshold=4,seed=seed,max_data_remember=4)
 
-
-#t = handler()
-
-#t.train_test()
-
-#test = processor(gpt.model,[gpt])
-gpt = gemma2b(folder_path.output.gemma + "\\Train")
-print(folder_path.output.gemma + "\\Train")
-# print(gpt.inference_base('Hello',32))
-# print(gpt.inference_lora('Hello',32))
-# print(gpt.inference_base('Hello',32))
-# print(gpt.inference_lora('Hello',32))
-# print(gpt.inference_base('Hello',32))
-num = 35
-trainer = handler()
-dp = causal_data(gpt.tokenizer)
-for i in range(num):
-    dp.add_data('Hello, I am a box.')
-gpt2_trainer = trainer.train_gemma(gpt,train_dataset=dp.get_data(),epoch=1)
-print(gpt.inference_base('Hello',32))
-print(gpt.inference_lora('Hello',32))
-gpt.unload_hard()
-print(gpt.inference_base('Hello',32))
-print(gpt.inference_lora('Hello',32))
-gpt.unload_hard()
-print(gpt.inference_base('Hello',32))
-print(gpt.inference_lora('Hello',32))
-for i in range(num):
-    dp.add_data('Hello, I am a boss.')
-gpt2_trainer = trainer.train_gemma(gpt,train_dataset=dp.get_data(),epoch=1)
-gpt.unload_soft()
-print(gpt.inference_lora('Hello',32))
-gpt.unload_soft()
-
-
-# gemma = gemma2b()
-
-
-# print(gemma.inference('Hello',64))
+dt_point = {
+        'Category Content' : 'Which of the following is true :\nThis is not 0. This is false. This is 1. This is 2',
+        'Question' : 'Which of the following is true :\nA. This is not 0. B. This is false. C. This is 1. D. This is 2.\nAnswer: ',
+        'Train' : 'Which of the following is true :\nA. This is not 0. B. This is false. C. This is 1. D. This is 2.\nAnswer: A. This is not 0',
+        'Answer' : 'A',
+        'Category' : 'Question'
+    }
+ds = []
+for i in range(100):
+    ds.append(dt_point)
+train_data,test_data = train_test_split(ds,test_size=0.1,random_state=seed)
+evaluator = causal_mmlu_eval(model,train_dataset=train_data,eval_dataset=test_data,step=9,
+                             use_selector=False,fixed_adapter='logic')
+evaluator.lr = 0.001
+result = evaluator.evaluate_and_train(start_from=0,end_to=180)
+print(len(model.loaded_loras))
