@@ -89,12 +89,15 @@ class causal_lora_model:
                     if (self.lam == None):
                         ele = (result[i][0],self._normalize_string(result[i][1]))
                     else:
-                        
-                        dup = int(self.lam/result[i][0])
-                        if (dup > 0):
+                        # dup = int(self.lam/result[i][0])
+                        if (result[i][0] < self.lam):
                             dup = 1
-                        print('Dup {}'.format(dup))
+                            
+                        else:
+                            dup = 0
                         ele = (result[i][0],self._normalize_string(result[i][1]),dup)
+                        print('Dup {}'.format(dup))
+
                     first_layer_label += result[i][1]
                     first_layer.append(ele)
                     i+=1
@@ -216,7 +219,7 @@ class causal_lora_model:
     def train_all(self,lr,epoch : int = 1,weight_decay : float = 0.01):
         for ele in self.loaded_loras:
             if ele not in ('Selector','Empty'):
-                dataset = self.loaded_loras[ele]['Train data'].get_data(empty=False)
+                dataset = self.loaded_loras[ele]['Train data'].get_data(empty=True)
                 self._split_train(dataset,ele,lr,epoch,weight_decay)
                 # torch.cuda.empty_cache()
     def _split_train(self,dataset,adapter_name,lr,epoch : int = 1,weight_decay : float = 0.01):
@@ -237,7 +240,7 @@ class causal_lora_model:
             if (self.__continue_train(dataset,adapter_name,lr,epoch,weight_decay) == False):
                 print(f'FATAL Train {adapter_name} error')
     def train_selector(self,lr,epoch : int = 1,weight_decay : float = 0.01):
-        dataset = self.loaded_loras['Selector']['Train data'].get_data()
+        dataset = self.loaded_loras['Selector']['Train data'].get_data(empty=True)
         self._split_train(dataset,'Selector',lr/5,epoch,weight_decay)
     def __continue_train(self,train_dataset,adapter_name,
                             lr,epoch : int = 1,weight_decay : float = 0.01):

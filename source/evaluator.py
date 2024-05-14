@@ -116,6 +116,12 @@ class causal_mmlu_eval:
         result = []
         its = []
         e_res = []
+        if (self.fixed_adapter != None):
+            step_result = {
+                            'Train' : 'Empty',
+                            'Evaluate' : self._evaluate_all()
+                        }
+            result.append(step_result)
         for i in range(start_from,min(end_to,len(self.train_dataset))):
             its.append(i)
             print(i,len(its),self.step)
